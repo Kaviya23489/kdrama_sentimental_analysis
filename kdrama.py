@@ -1,15 +1,15 @@
-# kdrama_sentiment_app.py
+# Sentiment_app.py
 
 import streamlit as st
 from textblob import TextBlob
 
-st.set_page_config(page_title="K-Drama Review Analyzer", page_icon="🎬")
+st.set_page_config(page_title="Words Analyzer", page_icon="🎬")
 
-st.title("🎭 K-Drama Sentiment Analyzer")
-st.write("Analyze the emotional tone of your K-Drama review!")
+st.title("🎭 Words Analyzer")
+st.write("Analyze the emotional tone of your words review!")
 
 # Input box
-review = st.text_area("✍️ Enter your K-Drama review here:", height=200)
+review = st.text_area("✍️ Enter your words here:", height=200)
 
 if st.button("🧠 Analyze Sentiment"):
     if review:
@@ -26,3 +26,4 @@ if st.button("🧠 Analyze Sentiment"):
         st.markdown(f"**Sentiment Score:** `{sentiment_score:.2f}`")
     else:
         st.warning("Please enter a review to analyze.")
+
